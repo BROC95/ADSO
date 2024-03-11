@@ -37,12 +37,14 @@ data.forEach((num, idx, arr) => {
     if (directoryPath == "/" || directoryPath =="/ADSO/") {
       
       img = "./frontend/assets/Figuras.png";
+      nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
+      question.appendChild(nuevoElemento1);
     }
     else {
       img = "../assets/Figuras.png";
+      nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
+      question.appendChild(nuevoElemento1);
     }
-    nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
-    question.appendChild(nuevoElemento1);
   }
 });
 
