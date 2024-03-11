@@ -12,6 +12,7 @@ import { contenido, data } from "./questions.js";
 let Q0 = document.getElementById("numberQ");
 Q0.innerHTML = "Pregunta 4";
 const QUESTION = data[5];
+const DB_NAME = "Emisora-form";
 
 // console.log(data)
 let Q3 = document.getElementById("question");
@@ -19,8 +20,8 @@ Q3.innerHTML = QUESTION;
 var db;
 let index = 0;
 function initIndexDB() {
-  console.log("data indexs");
-  let request = indexedDB.open("Emisora-form");
+  console.log("data db");
+  let request = indexedDB.open(DB_NAME);
   request.addEventListener("error", ErrorDB);
   request.addEventListener("blocked", blocketDB);
   request.addEventListener("success", initEmisora);
@@ -145,4 +146,5 @@ function getUserTable(event) {
   db.close();
 }
 
+initIndexDB(); 
 window.addEventListener("load", initIndexDB);
