@@ -19,7 +19,7 @@ Q3.innerHTML = QUESTION;
 var db;
 let index = 0;
 function initIndexDB() {
-  console.log("data index");
+  console.log("data indexs");
   let request = indexedDB.open("Emisora-form");
   request.addEventListener("error", ErrorDB);
   request.addEventListener("blocked", blocketDB);
@@ -50,11 +50,11 @@ function blocketDB(event) {
 }
 
 function setUser(event) {
+  event.preventDefault(); // Evita que la página se recargue al enviar el formulario
   let request = indexedDB.open("Emisora-form");
   request.addEventListener("error", ErrorDB);
   request.addEventListener("blocked", blocketDB);
   request.addEventListener("success", initEmisora);
-  //event.preventDefault(); // Evita que la página se recargue al enviar el formulario
 
   let ind = document.getElementById("index").value;
   ind = index;
