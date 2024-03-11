@@ -6,7 +6,6 @@ let contenido = await fetch(file)
     // Aquí puedes hacer lo que quieras con el contenido del archivo
     return contenido;
   });
-const img = "./frontend/assets/Figuras.png";
 
 // console.log(contenido)
 
@@ -32,6 +31,16 @@ data.forEach((num, idx, arr) => {
   if (idx == 1) {
     // console.log(idx);
     let nuevoElemento1 = document.createElement("div");
+    const location = window.location.pathname;
+    const directoryPath = location.substring(0, location.lastIndexOf("/") + 1);
+    console.log(directoryPath)
+    if (directoryPath == "/") {
+      
+      const img = "./frontend/assets/Figuras.png";
+    }
+    else {
+      const img = "../assets/Figuras.png";
+    }
     nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
     question.appendChild(nuevoElemento1);
   }
