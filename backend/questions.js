@@ -1,4 +1,4 @@
-const file = "/frontend/assets/questions.txt";
+const file = "./frontend/assets/questions.txt";
 
 let contenido = await fetch(file)
   .then((res) => res.text())
@@ -6,7 +6,7 @@ let contenido = await fetch(file)
     // Aquí puedes hacer lo que quieras con el contenido del archivo
     return contenido;
   });
-const img = "/frontend/assets/Figuras.png";
+const img = "./frontend/assets/Figuras.png";
 
 // console.log(contenido)
 
