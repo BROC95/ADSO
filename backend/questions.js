@@ -8,7 +8,7 @@ let contenido = await fetch(file)
   });
 
 // console.log(contenido)
-
+let img = "./frontend/assets/Figuras.png";
 let data = contenido.split("\n");
 
 let question = document.getElementById("question");
@@ -34,12 +34,12 @@ data.forEach((num, idx, arr) => {
     const location = window.location.pathname;
     const directoryPath = location.substring(0, location.lastIndexOf("/") + 1);
     console.log(directoryPath)
-    if (directoryPath == "/") {
+    if (directoryPath == "/" || directoryPath =="/ADSO/") {
       
-      const img = "./frontend/assets/Figuras.png";
+      img = "./frontend/assets/Figuras.png";
     }
     else {
-      const img = "../assets/Figuras.png";
+      img = "../assets/Figuras.png";
     }
     nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
     question.appendChild(nuevoElemento1);
