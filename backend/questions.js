@@ -1,5 +1,12 @@
-const file = "./frontend/assets/questions.txt";
+let file = "./frontend/assets/questions.txt";
+ const location1 = window.location.pathname;
+ const directoryPath1 = location.substring(0, location.lastIndexOf("/") + 1);
+if (directoryPath1 == "/" || directoryPath1 == "/ADSO/") {
+ file = "./frontend/assets/questions.txt";
 
+} else {
+  file = "../assets/questions.txt";
+}
 let contenido = await fetch(file)
   .then((res) => res.text())
   .then((contenido) => {
