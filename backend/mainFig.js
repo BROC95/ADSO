@@ -10,7 +10,7 @@ Q0.innerHTML = "Pregunta 1";
 Q1.innerHTML = QUESTION;
 Qt.innerHTML = table;
 let nuevoElemento1 = document.createElement("div");
-const img = "/frontend/assets/Figuras.png";
+const img = "./frontend/assets/Figuras.png";
 nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
 Qt.appendChild(nuevoElemento1);
 let circ = new Circulo(30);
