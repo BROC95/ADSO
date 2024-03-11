@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/frontend/css/style4.css" />
+    <title>Pregunta 4</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/frontend/index.html" id="p0"></a></li>
+        <li><a href="/frontend/view/question1.html" id="p1"></a></li>
+        <li><a href="/frontend/view/question2.html" id="p2"></a></li>
+        <li><a href="/frontend/view/question3.html" id="p3"></a></li>
+        <li><a href="/frontend/view/question4.html" id="p4"></a></li>
+      </ul>
+    </nav>
+    <br />
+    <h1 id="numberQ">Pregunta 1</h1>
+    <p class="card" id="question">No hay data</p>
+
+    <div class="container">
+      <div class="card">
+        <h1>a) Registro de Usuario</h1>
+        <form id="emisoraForm" method="POST">
+          <span id="index"></span>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" value="" required />
+          <br />
+
+          <label for="id">ID:</label>
+          <input type="text" id="id" name="id" value="" required />
+          <br />
+
+          <label for="birthdate">Fecha de Nacimiento:</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+          <br />
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" value="" required />
+          <br />
+
+          <label for="CiudadResid">Ciudad de Residencia:</label>
+          <input
+            type="text"
+            id="CiudadResid"
+            name="CiudadResid"
+            value=""
+            required
+          />
+          <br />
+
+          <label for="CiudadOrigin">Ciudad de Origen:</label>
+          <input
+            type="text"
+            id="CiudadOrigin"
+            name="CiudadOrigin"
+            value=""
+            required
+          />
+          <br />
+
+          <label for="ArtistaPref">Artista Preferido:</label>
+          <input
+            type="text"
+            id="ArtistaPref"
+            name="ArtistaPref"
+            value=""
+            required
+          />
+          <br />
+
+          <label for="Canciones">Canciones Favoritas:</label>
+          <input
+            type="text"
+            class=".form-input"
+            id="Canciones"
+            name="Canciones"
+            value=""
+            required
+          />
+          <br />
+
+          <input type="submit" value="Enviar" />
+        </form>
+      </div>
+    </div>
+    <p class="card">
+      Este formulario incluye campos para todos los datos del requerimiento,
+      como el nombre, la fecha de nacimiento, el correo electrónico, la ciudad
+      de residencia, la ciudad de origen, el artista preferido y las canciones
+      favoritas para la emisora. 😊
+      <br />
+      El almacenamiento del la información se hace a traves de indexDB, teniendo
+      una persistencia local en el servidor. 💻
+    </p>
+
+    <!-- <img src="/frontend/assets/Figuras.png" id="im" alt=""> -->
+
+    <div class="container">
+      <div class="card">
+        <h2>b) Datos del Usuario</h2>
+        <table>
+          <tr>
+            <th>Nombre</th>
+            <td id="nameTd">Tesla</td>
+          </tr>
+          <tr>
+            <th>ID</th>
+            <td id="idTd">12345</td>
+          </tr>
+          <tr>
+            <th>Fecha de Nacimiento</th>
+            <td id="birthdateTd">10-10-2000</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td id="emailTd">tesla@gmail.com</td>
+          </tr>
+          <tr>
+            <th>Ciudad de Residencia</th>
+            <td id="cityReTd">US</td>
+          </tr>
+          <tr>
+            <th>Ciudad de Origen</th>
+            <td id="cityOrTd">Croacia</td>
+          </tr>
+          <tr>
+            <th>Artista Preferido</th>
+            <td id="artistTd">Bethoveen</td>
+          </tr>
+          <tr>
+            <th>Canciones Favoritas</th>
+            <td id="songsTd">
+              Himno de la alegría,Moonlight Sonata,Para elisa
+            </td>
+          </tr>
+        </table>
+        <input type="text" id="search" value="0" />
+        <button id="Actualizar" class=".button">Actualizar Tabla</button>
+      </div>
+    </div>
+
+  </body>
+  <script type="module" src="/backend/questions.js"></script>
+  <script type="module" src="/backend/emisora.js"></script>
+</html>
