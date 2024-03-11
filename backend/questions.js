@@ -1,17 +1,18 @@
 let file = "./frontend/assets/questions.txt";
- const location1 = window.location.pathname;
- const directoryPath1 = location.substring(0, location.lastIndexOf("/") + 1);
-if (directoryPath1 == "/" || directoryPath1 == "/ADSO/") {
- file = "./frontend/assets/questions.txt";
-
-} else {
-  file = "../assets/questions.txt";
-}
+// const location1 = window.location.pathname;
+// const directoryPath1 = location.substring(0, location.lastIndexOf("/") + 1);
+// if (directoryPath1 == "/" || directoryPath1 == "/ADSO/") {
+//   file = "./frontend/assets/questions.txt";
+// } else {
+//   file = "../assets/questions.txt";
+// }
 let contenido = await fetch(file)
   .then((res) => res.text())
   .then((contenido) => {
     // Aquí puedes hacer lo que quieras con el contenido del archivo
     return contenido;
+  }).catch(() => {
+    file = "../assets/questions.txt";
   });
 
 // console.log(contenido)
@@ -40,14 +41,12 @@ data.forEach((num, idx, arr) => {
     let nuevoElemento1 = document.createElement("div");
     const location = window.location.pathname;
     const directoryPath = location.substring(0, location.lastIndexOf("/") + 1);
-    console.log(directoryPath)
-    if (directoryPath == "/" || directoryPath =="/ADSO/") {
-      
+    console.log(directoryPath);
+    if (directoryPath == "/" || directoryPath == "/ADSO/") {
       img = "./frontend/assets/Figuras.png";
       nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
       question.appendChild(nuevoElemento1);
-    }
-    else {
+    } else {
       img = "../assets/Figuras.png";
       nuevoElemento1.innerHTML = `<img src="${img}" id="imagen" alt=""></img>`;
       question.appendChild(nuevoElemento1);
