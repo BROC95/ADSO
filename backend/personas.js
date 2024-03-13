@@ -52,13 +52,12 @@ let data2 = document.getElementById("data2");
 let data3 = document.getElementById("data3");
 let data4 = document.getElementById("data4");
 let data5 = document.getElementById("data5");
-let numeros = document.getElementById("numeros");
 data1.innerHTML = "Personas ingresadas " + personas;
 data2.innerHTML = "Personas mayores de edad " + mayores;
 data3.innerHTML = "Personas mayores de 60 años " + mayoresA;
 data4.innerHTML = "Personas menores de edad " + menores;
 data5.innerHTML = "Edad maxima registrada " + Math.max(...personas);
 data5.innerHTML = "Edad minima registrada " + Math.min(...personas);
-numeros.innerHTML = mayoresA;
+
 
 export default mayores;
