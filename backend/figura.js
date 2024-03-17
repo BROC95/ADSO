@@ -25,7 +25,7 @@ class figura {
 class Circulo extends figura {
   constructor(radio) {
     super("Circulo");
-    this.radio = radio;
+    this.radio = parseFloat(radio);
   }
 
   perimetro() {
@@ -44,10 +44,10 @@ class Circulo extends figura {
 class Triangulo extends figura {
   constructor(a, b, c, h) {
     super("Triangulo");
-    this.a = a;
-    this.b = b;
-    this.c = c;
-    this.h = h;
+    this.a = parseFloat(a);
+    this.b = parseFloat(b);
+    this.c = parseFloat(c);
+    this.h = parseFloat(h);
   }
 
   area() {
@@ -68,7 +68,7 @@ class Triangulo extends figura {
 class Cuadrado extends figura {
   constructor(a) {
     super("Cuadrado");
-    this.a = a;
+    this.a = parseFloat(a);
   }
 
   area() {
@@ -86,8 +86,8 @@ class Cuadrado extends figura {
 class Rectangulo extends figura {
   constructor(a, b) {
     super("Rectangulo");
-    this.a = a;
-    this.b = b;
+    this.a = parseFloat(a);
+    this.b = parseFloat(b);
   }
 
   area() {

@@ -25,9 +25,9 @@ th {
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-  height: 100vh;
+  padding-right: 100px;
 }
 /* Establece las variables de color */
 

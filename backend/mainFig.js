@@ -34,7 +34,7 @@ let tria = new Triangulo(2, 2, 2, 2);
 tria.message();
 let rect = new Rectangulo(2, 3);
 rect.message();
-let cuad = new Cuadrado(2, 2, 2, 2);
+let cuad = new Cuadrado(2);
 cuad.message();
 
 let data1 = document.getElementById("data1");
@@ -45,3 +45,36 @@ let data3 = document.getElementById("data3");
 data3.innerHTML = cuad.messageF();
 let data4 = document.getElementById("data4");
 data4.innerHTML = circ.messageF();
+
+let ButtonA = document.getElementById("enterD");
+
+var click = ButtonA.addEventListener("click", () => {
+  alert("Ingrese datos Circulo de acuerdo a la tabla:");
+  let rad = prompt("Ingresar  radio");
+  let circN = new Circulo(rad);
+  circ.message();
+  data4.innerHTML = circN.messageF();
+
+  alert("Ingrese datos Triangulo de acuerdo a la tabla:");
+  let a = prompt("Ingresar  a");
+  let b = prompt("Ingresar  b");
+  let c = prompt("Ingresar  c");
+  let h = prompt("Ingresar  h");
+  let triaN = new Triangulo(a, b, c, h);
+  tria.message();
+  data1.innerHTML = triaN.messageF();
+
+  alert("Ingrese datos Rectangulo de acuerdo a la tabla:");
+  let ar = prompt("Ingresar  a");
+  let br = prompt("Ingresar  b");
+  let rectN = new Rectangulo(ar, br);
+  rect.message();
+  data2.innerHTML = rectN.messageF();
+  alert("Ingrese datos Cuadrado de acuerdo a la tabla:");
+  data2.innerHTML = rectN.messageF();
+  let ac = prompt("Ingresar  a");
+  let cuadN = new Cuadrado(ac);
+  cuad.message();
+  data3.innerHTML = cuadN.messageF();
+  alert("Actualizar");
+});
