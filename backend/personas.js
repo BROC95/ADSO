@@ -23,6 +23,10 @@ const menu = "1 Ingresar persona\n 0 salir";
 let ButtonA = document.getElementById("enterD");
 ButtonA.addEventListener("click", () => {
   personas = [];
+  prom = 0;
+  menores = 0;
+  mayoresA = 0;
+  mayores = 0;
   alert("Ingrese datos De las personas");
 
   for (let i = 1; i < 11; i++) {
